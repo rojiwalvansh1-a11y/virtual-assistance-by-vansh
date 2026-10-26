@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap'); */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+    font-family: "Protest Guerrilla", sans-serif;
+}
+
+
+#logo {
+    width: 18vw;
+    transition: transform 0.3s;
+    animation: fadeIn 0.8s;
+    background: none;
+    border-radius: 68% 68% 68% 68%;
+
+
+}
+
+
+h1 {
+    color: #ecf0f1;
+    font-size: 2.5rem;
+    animation: glow-light 1.5s infinite alternate, fadeIn 2.5s;
+}
+
+@keyframes glow-light {
+    0% {
+        text-shadow: 0 0 5px rgba(236, 240, 241, 0.8), 0 0 10px rgba(236, 240, 241, 0.7);
+    }
+
+    100% {
+        text-shadow: 0 0 20px rgba(236, 240, 241, 1), 0 0 30px rgba(236, 240, 241, 1);
+    }
+}
+
+
+
+#name {
+    color: #09bced;
+    font-size: 3.5rem;
+    text-shadow: 0 0 5px rgba(3, 144, 183, 0.5);
+    animation: glow-blue 1.5s infinite alternate, fadeIn 1s;
+}
+
+
+@keyframes glow-blue {
+    0% {
+        text-shadow: 0 0 5px rgba(65, 185, 249, 0.7), 0 0 10px rgba(65, 185, 249, 0.7);
+    }
+
+    100% {
+        text-shadow: 0 0 20px rgb(83, 187, 247), 0 0 30px rgba(83, 187, 247);
+    }
+}
+
+#va {
+    color: #1abc9c;
+    font-size: 3.5rem;
+    text-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+    animation: glow-teal 1.5s infinite alternate, fadeIn 1.5s;
+}
+
+
+@keyframes glow-teal {
+    0% {
+        text-shadow: 0 0 5px rgba(26, 188, 156, 0.7), 0 0 10px rgba(26, 188, 156, 0.5);
+    }
+
+    100% {
+        text-shadow: 0 0 20px rgba(26, 188, 156, 1), 0 0 30px rgba(26, 188, 156, 0.8);
+    }
+}
+
+
+#voice {
+    width: 100px;
+    display: none;
+    animation: bounce 2s infinite;
+}
+
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+#btn {
+    background: linear-gradient(45deg, #0093f4, #1abc9c);
+    padding: 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    gap: 1px;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    color: white;
+    box-shadow: 0 0 20px rgba(41, 128, 185, 0.7), 0 0 30px rgba(142, 68, 173, 0.7);
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+    animation: fadeIn 2.5s;
+
+
+
+}
+
+#btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(41, 128, 185, 1), 0 0 60px rgba(142, 68, 173, 1);
+
+}
+
+#searchContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#searchInput {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    color: black;
+    box-shadow: 0 0 10px rgba(238, 239, 241, 0.989), 0 0 20px rgba(142, 68, 173, 0.5);
+    border: none;
+    transition: all 0.5s;
+    width: 300px;
+    animation: fadeIn 2.5s;
+}
+
+#searchBtn {
+    background: linear-gradient(45deg, #0093f4, #1abc9c);
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    color: rgb(246, 244, 244);
+    box-shadow: 0 0 20px rgba(41, 128, 185, 0.5), 0 0 30px rgba(142, 68, 173, 0.5);
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+    animation: fadeIn 2.5s;
+}
+
+#searchBtn:hover {
+    box-shadow: 0 0 40px rgba(41, 128, 185, 1), 0 0 60px rgba(142, 68, 173, 1);
+    letter-spacing: 1px;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    h1,
+    #name,
+    #va {
+        font-size: 1.5rem;
+    }
+
+    #searchInput,
+    #searchBtn {
+        font-size: 1rem;
+    }
+
+    #btn {
+        font-size: 1rem;
+    }
+}
+
+#wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 15px;
+    box-shadow:
+        0 0 30px rgba(253, 253, 253, 0.977),
+        0 0 60px rgb(255, 255, 252),
+        0 0 90px rgb(245, 245, 245),
+        0 0 120px rgba(255, 255, 255, 0.989);
+    filter: blur(20px);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+}
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.logo-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.logo-button img {
+    width: 100px;
+    height: auto;
+}
+
+.btn_one {
+    height: 115px;
+    width: 100px;
+    color: white;
+    position: absolute;
+    left: 15px;
+    top: 23px;
+}
+
+.mainbox .nav .btn_two {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+
+
+    left: 99px;
+    color: rgb(255, 255, 255);
+}
+
+.nav {
+    position: absolute;
+    left: -300px;
+    top: 0px;
+    height: 60vh;
+    width: 120px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.8s ease-in-out;
+    border-radius: 0px 0px 20px 0px;
+}
+
+.menu a {
+
+    line-height: 2;
+    text-decoration: none;
+    color: white;
+    transition: 1s;
+    display: flex;
+    flex-grow: 1;
+
+    margin-top: 45px;
+    padding: 14px 20px;
+
+
+}
+
+.menu a:hover {
+    box-shadow: 0px 1px 2px white;
+}
+
+#checkbox:checked~.nav {
+    left: 0px;
+
+}
+
+#checkbox:checked~.btn_one {
+    display: none;
+
+}
+
+#checkbox {
+    display: none;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    
+}
+
+#searchHistoryContainer {
+    color: white;
+    border: 1px solid red; /* Temporary border for visibility */
+    padding: 10px;
+    margin-top: 20px;
+    height: 100px;
+    width: 500px;
+}
+
+body{
+    overflow: auto;
+}
